@@ -70,10 +70,10 @@ timezone shown clearly.
 
 ## Install
 
-The installable package is in this repository: **`threat-recon-0.1.2.tgz`**.
+The installable package is in this repository: **`threat-recon-0.1.3.tgz`**.
 
 1. In Cribl, go to **Apps → Add App → Import from File**.
-2. Upload `threat-recon-0.1.2.tgz`.
+2. Upload `threat-recon-0.1.3.tgz`.
 3. Review the declared permissions and the external endpoint (`www.virustotal.com`) and confirm.
 4. **Share** the App with the users or teams who should use it (**App user** role).
 
@@ -121,4 +121,8 @@ organisation is ever labelled malicious.
 
 ---
 
-**Author:** Arno Arzumanyan · **App ID:** `threat-recon` · **Version:** 0.1.2 · Community-built for the Cribl App Hackathon.
+**Author:** Arno Arzumanyan · **App ID:** `threat-recon` · **Version:** 0.1.3 · Community-built for the Cribl App Hackathon.
+
+## License
+
+Licensed under the [Apache License 2.0](./LICENSE).
