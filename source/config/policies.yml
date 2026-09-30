@@ -1,0 +1,22 @@
+# Cribl API paths this App calls. All are read-only except creating/cancelling its own search jobs
+# and the optional, explicitly confirmed "Save as Cribl saved search" action.
+
+policies:
+  # Cribl Search — datasets and search jobs (always the default_search context)
+  - object: '/m/default_search/search/datasets'
+    actions: ['GET']
+  - object: '/m/default_search/search/jobs'
+    actions: ['POST']
+  - object: '/m/default_search/search/jobs/*'
+    actions: ['GET', 'POST']
+  # Cribl Search — "Save as search" (creates a saved search only after explicit confirmation)
+  - object: '/m/default_search/search/saved'
+    actions: ['POST']
+  # Stream lookups — read-only list and row filter
+  - object: '/m/:gid/system/lookups'
+    actions: ['GET']
+  - object: '/m/:gid/system/lookups/*'
+    actions: ['GET']
+  # Worker group discovery for the lookup group picker in Settings
+  - object: '/products/stream/groups'
+    actions: ['GET']

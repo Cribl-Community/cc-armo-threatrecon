@@ -121,6 +121,26 @@ organisation is ever labelled malicious.
 
 ---
 
+## Source code
+
+The full source is in [`source/`](./source): a React + TypeScript Cribl App (Vite, Capra design system), scaffolded with the official `@cribl/apps` CLI.
+
+```bash
+cd source
+npm install
+npm test          # unit + provider integration tests
+npm run dev       # then Apps → Create App → Live Preview in Cribl
+npm run package   # builds the installable .tgz
+```
+
+Technical docs: [source/README.md](./source/README.md) (permissions and every Cribl API used) ·
+[source/ARCHITECTURE.md](./source/ARCHITECTURE.md) (design and data flow) · [source/DEMO.md](./source/DEMO.md) (2-minute demo script).
+
+No credentials are stored in this repository. The VirusTotal API key is entered in the App's Settings at runtime
+and kept encrypted in Cribl's App KV store.
+
+---
+
 **Author:** Arno Arzumanyan · **App ID:** `threat-recon` · **Version:** 0.1.3 · Community-built for the Cribl App Hackathon.
 
 ## License

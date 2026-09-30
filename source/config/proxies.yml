@@ -1,0 +1,17 @@
+# External API declaration. Admins see exactly which endpoints the app uses at install time.
+#
+# VirusTotal v3 object lookups only (IP address, domain, file hash). The API key is
+# stored in App KV as the ENCRYPTED value `virustotalApiKey` (Settings page) and is
+# injected here on the platform side, so it never reaches the browser.
+www.virustotal.com:
+  timeout: 15000
+  paths:
+    allowlist:
+      - /api/v3/ip_addresses/
+      - /api/v3/domains/
+      - /api/v3/files/
+  headers:
+    inject:
+      x-apikey: kv.virustotalApiKey
+    allowlist:
+      - accept
